@@ -20,7 +20,7 @@ LAST_RUN_FILE = FOLDER / "last_run.txt"   # 마지막으로 실행한 날짜를 
 LOG_FILE = FOLDER / "daily_run.log"       # 실행 기록 (문제가 생겼을 때 원인 찾기용)
 NEWS_FILE = FOLDER / "news.json"
 # ✏️ 1) 알림 제목: 글자만 바꾸면 돼요
-NOTICE_TITLE = "독서·출판 아침 브리핑"
+NOTICE_TITLE = "경제·IT 아침 브리핑"
 
 
 # ===== 2. 기록 남기기 =====

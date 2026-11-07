@@ -1,17 +1,21 @@
 {
   "keywords": [
     "드론",
-    "sk하이닉스",
+    "하이닉스",
     "인공지능"
   ],
   "feeds": [
     {
-      "name": "경향신문 문화",
-      "url": "https://www.khan.co.kr/rss/rssdata/culture_news.xml"
+      "name": "경향신문 경제",
+      "url": "https://www.khan.co.kr/rss/rssdata/economy_news.xml"
     },
     {
-      "name": "한겨레 문화",
-      "url": "https://www.hani.co.kr/rss/culture/"
+      "name": "한겨레 경제",
+      "url": "https://www.hani.co.kr/rss/economy/"
+    },
+    {
+      "name": "한겨레 미래&과학",
+      "url": "https://www.hani.co.kr/rss/science/"
     }
   ]
 }

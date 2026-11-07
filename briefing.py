@@ -1,8 +1,8 @@
 # ===== 뉴스 브리핑 만들기 =====
 # 하는 일:
 #   1) settings.json에 적힌 모든 RSS(뉴스 사이트의 "새 글 목록")에서 기사를 가져와요.
-#   2) 제목이나 소개문에 키워드(독서, 출판, 인공지능 등)가 들어간 기사를 먼저 고르고,
-#      모자라면 최신 기사로 채워서 최대 5개를 만들어요.
+#   2) 제목이나 소개문에 키워드(드론, 하이닉스, 인공지능 등)가 들어간 기사를
+#      키워드마다 돌아가며 골고루 고르고, 모자라면 최신 기사로 채워서 최대 5개를 만들어요.
 #   3) 기사마다 어떤 키워드가 걸렸는지 적어요.
 #   4) Gemini(구글의 AI)에게 기사마다 세 줄 요약을 부탁해요.
 #      키가 없거나 Gemini가 끝내 실패하면, summarizer.py가 소개문 앞 문장으로 대신 채워요.
@@ -46,7 +46,7 @@ MAX_ARTICLES = 5
 JSON_FILE = "news.json"
 HTML_FILE = "index.html"
 # ✏️ 3) 화면 맨 위 제목: 글자만 바꾸면 돼요
-PAGE_TITLE = "독서·출판 아침 브리핑"
+PAGE_TITLE = "경제·IT 아침 브리핑"
 # ✏️ 4) 맨 아래 안내 문구: 글자만 바꾸면 돼요
 FOOTER_TEXT = "AI 요약은 틀릴 수 있음. 자세한 내용은 원문을 확인해 주세요."
 # ✏️ 5) 쓸 Gemini 모델 이름: 앞에서부터 차례로 써 보고, 안 되면 다음 모델로 넘어가요.
@@ -115,6 +115,52 @@ def newest_first_key(article):
     # 앞에 마이너스(-)를 붙이면 작은 값부터 정렬할 때 최신이 앞으로 와요.
     timestamp = datetime.strptime(article["date"], "%Y-%m-%d %H:%M").timestamp() if has_date else 0
     return (not has_date, -timestamp, article["_position"])
+
+
+# ===== 6-1. 주제(키워드)별로 골고루 고르기 =====
+def pick_balanced(articles, keywords, how_many):
+    """키워드마다 돌아가며 한 개씩 골라요. (카드 게임에서 한 장씩 나눠 주듯이)
+    예) 키워드가 드론·하이닉스·인공지능이면
+        1바퀴: 드론 최신 1개 → 하이닉스 최신 1개 → 인공지능 최신 1개
+        2바퀴: 드론 다음 1개 → 하이닉스 다음 1개 → ...
+    한 기사에 키워드가 여러 개 걸려 있으면 한 번만 들어가요.
+    키워드 기사가 모자라면, 키워드 없는 최신 기사로 채워요."""
+    # 1단계: 키워드마다 "그 키워드가 들어간 기사 목록"을 최신 순으로 만들어요.
+    by_keyword = {
+        keyword: sorted([a for a in articles if keyword in a["matched_keywords"]], key=newest_first_key)
+        for keyword in keywords
+    }
+
+    picked = []
+    picked_links = set()          # 이미 고른 기사의 링크 (같은 기사를 두 번 넣지 않으려고)
+
+    def add(article):
+        if article["link"] not in picked_links:
+            picked.append(article)
+            picked_links.add(article["link"])
+
+    # 2단계: 키워드를 돌아가며 한 개씩 골라요. 다 고르거나, 더 고를 기사가 없으면 멈춰요.
+    while len(picked) < how_many:
+        added_this_round = False
+        for keyword in keywords:
+            # 이 키워드 목록에서 아직 안 고른 기사 중 가장 최신 것을 찾아요.
+            for article in by_keyword[keyword]:
+                if article["link"] not in picked_links:
+                    add(article)
+                    added_this_round = True
+                    break
+            if len(picked) >= how_many:
+                break
+        if not added_this_round:   # 어느 키워드에도 남은 기사가 없으면 그만 돌아요
+            break
+
+    # 3단계: 그래도 모자라면 키워드 없는 기사를 최신 순으로 채워요.
+    others = sorted([a for a in articles if not a["matched_keywords"]], key=newest_first_key)
+    for article in others:
+        if len(picked) >= how_many:
+            break
+        add(article)
+    return picked
 
 
 # ===== 7. .env에서 API 키 읽기 =====
@@ -513,7 +559,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         <div class="filters" id="filters">
 __FILTERS__
         </div>
-        <p class="help">키워드 기사를 먼저 고르고, 모자라면 최신 기사로 채웠어요.</p>
+        <p class="help">키워드마다 돌아가며 골고루 고르고, 모자라면 최신 기사로 채웠어요.</p>
       </aside>
 
       <!-- ===== 오른쪽 칸: 기사 목록 ===== -->
@@ -647,12 +693,12 @@ def main():
     for article in all_articles:
         article["matched_keywords"] = find_keywords(article, keywords)
 
-    # 3단계: 키워드가 걸린 기사와 안 걸린 기사로 나누고, 각각 최신 순으로 정렬해요.
-    matched = sorted([a for a in all_articles if a["matched_keywords"]], key=newest_first_key)
-    others = sorted([a for a in all_articles if not a["matched_keywords"]], key=newest_first_key)
+    # 3단계: 키워드가 걸린 기사가 몇 개인지 세어 둬요. (마지막에 알려 주려고)
+    matched = [a for a in all_articles if a["matched_keywords"]]
 
-    # 4단계: 키워드 기사를 먼저 놓고, 모자라면 최신 기사로 채워서 최대 MAX_ARTICLES개만 남겨요.
-    picked = (matched + others)[:MAX_ARTICLES]
+    # 4단계: 키워드(주제)마다 돌아가며 골고루 골라서 최대 MAX_ARTICLES개를 만들어요.
+    #        모자라면 키워드 없는 최신 기사로 채워요.
+    picked = pick_balanced(all_articles, keywords, MAX_ARTICLES)
 
     # 5단계: 고른 기사마다 세 줄 요약을 붙여요. (Gemini → 안 되면 소개문으로 대신)
     api_key = load_api_key()
