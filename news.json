@@ -1,0 +1,87 @@
+{
+  "collected_at": "2026-11-07 14:19",
+  "keywords": [
+    "독서",
+    "출판",
+    "인공지능"
+  ],
+  "articles": [
+    {
+      "title": "“퇴직 사유 AI” 이세돌이 새로 배우는 ‘노동’…짠한데, 찡하다 [이진송의 아니 근데]",
+      "link": "https://www.khan.co.kr/article/202611070600011/?utm_source=khan_rss&utm_medium=rss&utm_campaign=culture_news",
+      "date": "2026-11-07 06:00",
+      "source": "경향신문 문화",
+      "matched_keywords": [
+        "인공지능"
+      ],
+      "summary": [
+        "KBS가 10월 23일에 예능 프로그램 '<백수 이세돌>'을 시작했습니다.",
+        "이 프로그램은 인공지능 알파고와 대국했던 이세돌 9단이 요구르트 배달에 나선 내용을 다룹니다.",
+        "자세한 내용은 원문 확인 필요"
+      ],
+      "summary_by": "gemini"
+    },
+    {
+      "title": "[책과 삶]AI의 역설, 다시 생명을 묻는다",
+      "link": "https://www.khan.co.kr/article/202611052052025/?utm_source=khan_rss&utm_medium=rss&utm_campaign=culture_news",
+      "date": "2026-11-05 20:52",
+      "source": "경향신문 문화",
+      "matched_keywords": [
+        "인공지능"
+      ],
+      "summary": [
+        "2023년 7월 일본 삿포로에서 열린 국제인공생명학회에서 SF 작가 테드 창과 신경과학자 아닐 세스는 생명과 의식을 주제로 이야기를 나눴다.",
+        "그해 3월 GPT-4가 등장하며 인공지능(AI)이 인간 지능을 넘어서는 ‘기술적 특이점’ 논의가 달아오르던 시기였다.",
+        "자세한 내용은 원문 확인 필요"
+      ],
+      "summary_by": "gemini"
+    },
+    {
+      "title": "[금요일의 문장]사람의 수명은 100년을 넘기기 어렵지만 기록의 수명은 수백 년이 넘는다",
+      "link": "https://www.khan.co.kr/article/202611052003025/?utm_source=khan_rss&utm_medium=rss&utm_campaign=culture_news",
+      "date": "2026-11-05 20:03",
+      "source": "경향신문 문화",
+      "matched_keywords": [
+        "출판"
+      ],
+      "summary": [
+        "고전 연구가 장유승의 책 <이것은 전통이 아니다>는 장유유서와 한국식 나이 등 우리가 전통이라 믿는 것들의 유래를 살핍니다.",
+        "이 책은 축하의 의미를 잃고 논쟁거리가 되어가는 축의금과 8만원에 이른 서울 예식장 평균 식대 이야기도 다룹니다.",
+        "자세한 내용은 원문 확인 필요"
+      ],
+      "summary_by": "gemini"
+    },
+    {
+      "title": "판권에 ‘AI 학습 거부’ 못 박고, 사용료도 받고···유럽 출판계의 반격",
+      "link": "https://www.khan.co.kr/article/202611051657001/?utm_source=khan_rss&utm_medium=rss&utm_campaign=culture_news",
+      "date": "2026-11-05 16:57",
+      "source": "경향신문 문화",
+      "matched_keywords": [
+        "출판",
+        "인공지능"
+      ],
+      "summary": [
+        "테크 기업이 동의 없이 인공지능(AI) 학습에 책을 활용하면서 한국 작가들의 책을 포함해 전 세계적인 문제가 되고 있습니다.",
+        "지난달 독일 프랑크푸르트 도서전에서 120여 개 출판사는 생성형 AI 기업에 출판사의 저작물 학습 내역을 투명하게 공개하라는 호소문을 냈습니다.",
+        "자세한 내용은 원문 확인 필요"
+      ],
+      "summary_by": "gemini"
+    },
+    {
+      "title": "한국출판인회 선정 ‘올해의 출판인’에 이광호 대표",
+      "link": "https://www.khan.co.kr/article/202611042021025/?utm_source=khan_rss&utm_medium=rss&utm_campaign=culture_news",
+      "date": "2026-11-04 20:21",
+      "source": "경향신문 문화",
+      "matched_keywords": [
+        "출판"
+      ],
+      "summary": [
+        "이광호 문학과지성사 대표가 한국출판인회의가 선정하는 ‘올해의 출판인’ 본상을 수상했다.",
+        "출판인회의는 4일 이 대표 등 ‘2026 올해의 출판인’ 7개 부분 수상자를 선정해 발표했다.",
+        "자세한 내용은 원문 확인 필요"
+      ],
+      "summary_by": "gemini"
+    }
+  ],
+  "failed_feeds": []
+}

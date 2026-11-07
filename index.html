@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>독서·출판 아침 브리핑</title>
+  <!-- 이 파일은 briefing.py가 자동으로 만들어요. 직접 고치면 다음 실행 때 덮어써져요.
+       제목·문구는 briefing.py 맨 위 ✏️ 표시, 모양은 briefing.py의 HTML_TEMPLATE을 고쳐 주세요. -->
+
+  <!-- 도트 느낌 한글 글꼴(갈무리). 인터넷이 없으면 기본 글꼴로 보여요 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/galmuri@latest/dist/galmuri.css">
+
+  <style>
+    /* ===== 색깔 모음 (여기 값만 바꿔도 분위기가 바뀌어요) ===== */
+    :root {
+      --sky: #8fd3f4;     /* 하늘색 배경 */
+      --panel: #c6c6c6;   /* 카드(인벤토리 창) 회색 */
+      --dark: #3f3f3f;    /* 기본 글자색 */
+      --muted: #4a4a4a;   /* 조금 흐린 글자색 */
+      --slot: #8b8b8b;    /* 움푹 들어간 칸 회색 */
+      --deep: #373737;    /* 어두운 칸 */
+      --gold: #ffff55;    /* 키워드 강조 노란색 */
+      --green: #3c8527;   /* 고른 버튼 초록색 */
+    }
+
+    * { box-sizing: border-box; }
+
+    /* ===== 바깥 배경: 하늘 + 풀밭 ===== */
+    body {
+      margin: 0;
+      min-height: 100vh;
+      padding: 32px 20px 96px;     /* 아래쪽은 풀밭 자리 */
+      background: var(--sky);
+      color: var(--dark);
+      font-family: "Galmuri11", "Galmuri9", "DungGeunMo", "Malgun Gothic", "Apple SD Gothic Neo", monospace;
+    }
+
+    /* 화면 맨 아래 풀밭 (잔디 한 줄 + 흙) */
+    body::after {
+      content: "";
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 64px;
+      background:
+        conic-gradient(rgba(0, 0, 0, 0.08) 25%, transparent 0 50%, rgba(0, 0, 0, 0.08) 0 75%, transparent 0) 0 0 / 16px 16px,
+        linear-gradient(#5fb23a 0 16px, #8a5a3a 16px);
+      pointer-events: none;
+    }
+
+    /* ===== 전체 틀: 제목 + 두 칸 ===== */
+    .wrap {
+      position: relative;
+      z-index: 1;
+      max-width: 1040px;
+      margin: 0 auto;
+    }
+
+    .top {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+    .top svg { width: 48px; height: 48px; flex: none; }
+
+    .title {
+      margin: 0;
+      padding: 6px 14px;
+      font-size: 2rem;
+      color: #fff;
+      background: rgba(0, 0, 0, 0.7);   /* 캐릭터 머리 위 이름표 느낌 */
+    }
+
+    /* 컴퓨터 화면 기준: 왼쪽(브리핑 정보) / 오른쪽(기사 목록) 두 칸 */
+    .columns {
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    /* ===== 카드 = 마인크래프트 인벤토리 창 ===== */
+    .card {
+      min-width: 0;   /* 긴 글이 있어도 칸이 화면 밖으로 늘어나지 않게 해요 */
+      padding: 24px;
+      background: var(--panel);
+      /* 검정 바깥선 + 왼쪽 위는 밝게, 오른쪽 아래는 어둡게 (입체감) */
+      box-shadow: 0 0 0 4px #000, inset 4px 4px 0 #fff, inset -4px -4px 0 #555;
+    }
+
+    /* 제목 (오른쪽으로 홈 파인 선이 이어져요) */
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 0 0 14px;
+      font-size: 1rem;
+    }
+    .section-title::after {
+      content: "";
+      flex: 1;
+      height: 4px;
+      border-top: 2px solid var(--slot);
+      border-bottom: 2px solid #fff;
+    }
+
+    .help {
+      margin: 0;
+      font-size: 0.85rem;
+      line-height: 1.6;
+      color: var(--muted);
+    }
+
+    /* ===== 왼쪽 칸: 수집 시각 + 언론사 ===== */
+    .info {
+      margin: 0 0 18px;
+      padding: 10px 12px;
+      font-size: 0.85rem;
+      line-height: 1.8;
+      color: #fff;
+      background: var(--deep);
+      box-shadow: inset 2px 2px 0 #1b1b1b, inset -2px -2px 0 #fff;
+    }
+    .info b { color: var(--gold); font-weight: 700; }
+
+    /* ===== 버튼 = 마인크래프트 버튼 ===== */
+    .filters { display: grid; gap: 8px; margin-bottom: 18px; }
+    .btn {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 14px;
+      font: inherit;
+      font-weight: 700;
+      color: #fff;
+      text-shadow: 2px 2px 0 var(--dark);
+      background: var(--slot);
+      border: 2px solid #000;
+      box-shadow: inset 2px 2px 0 #bcbcbc, inset -2px -2px 0 #555;
+      cursor: pointer;
+    }
+    .btn:hover { color: #ffffa0; background: #4a5d99; }
+    .btn:active { box-shadow: inset 2px 2px 0 #555, inset -2px -2px 0 #bcbcbc; }
+    .btn:focus-visible { outline: 3px solid #fff; outline-offset: 2px; }
+    .btn[aria-pressed="true"] { background: var(--green); }   /* 지금 고른 버튼은 초록색 */
+    .btn .count { color: #e0e0e0; }
+
+    /* ===== 오른쪽 칸: 기사 목록 ===== */
+    .articles { display: grid; gap: 14px; }
+
+    /* 기사 하나 = 움푹 들어간 아이템 칸 */
+    .article {
+      padding: 16px;
+      background: var(--slot);
+      box-shadow: inset 2px 2px 0 var(--deep), inset -2px -2px 0 #fff;
+      animation: drop 0.4s steps(4) both;   /* 위에서 뚝뚝 끊기며 내려와요 */
+    }
+    .article[hidden] { display: none; }
+    @keyframes drop {
+      from { opacity: 0; transform: translateY(-8px); }
+      to   { opacity: 1; transform: none; }
+    }
+
+    .article h3 {
+      margin: 0 0 10px;
+      font-size: 1.05rem;
+      line-height: 1.5;
+      color: #fff;
+      text-shadow: 2px 2px 0 var(--dark);
+      word-break: keep-all;        /* 한글 단어가 중간에서 끊기지 않게 해요 */
+      overflow-wrap: anywhere;     /* 아주 긴 단어는 그래도 줄을 바꿔서 화면 밖으로 안 나가게 해요 */
+    }
+
+    /* 키워드 = 아이템 이름표 */
+    .tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; padding: 0; list-style: none; }
+    .tag {
+      padding: 2px 8px;
+      font-size: 0.75rem;
+      color: var(--gold);
+      background: #100010;
+      border: 2px solid #2a0a5e;
+    }
+    .tag.latest { color: #c0c0c0; }   /* 키워드 없이 최신 기사로 채운 것 */
+    .tag.by { color: #55ffff; }       /* 누가 요약했는지 (AI 요약 / 소개문 발췌) */
+
+    /* 세 줄 요약 = 채팅창 */
+    .summary {
+      margin: 0 0 12px;
+      padding: 10px 12px 10px 28px;
+      font-size: 0.9rem;
+      line-height: 1.7;
+      color: #fff;
+      background: rgba(0, 0, 0, 0.6);
+      overflow-wrap: anywhere;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin: 0;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #fff;
+      text-shadow: 1px 1px 0 var(--dark);
+    }
+
+    /* 원문 링크 = 마인크래프트 아이템 설명창 */
+    .item {
+      display: inline-block;
+      padding: 4px 10px;
+      color: #fff;
+      text-decoration: none;
+      text-shadow: none;
+      background: #100010;
+      border: 2px solid #2a0a5e;
+    }
+    .item:hover { color: var(--gold); }
+    .item:focus-visible { outline: 3px solid #fff; outline-offset: 2px; }
+
+    .empty {
+      margin: 0;
+      padding: 16px;
+      color: #fff;
+      background: rgba(0, 0, 0, 0.6);
+    }
+    .empty[hidden] { display: none; }
+
+    /* 맨 아래 안내 = 채팅창 */
+    .notice {
+      margin: 20px 0 0;
+      padding: 8px 12px;
+      font-size: 0.8rem;
+      line-height: 1.6;
+      color: #fff;
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    /* ===== 좁은 화면 (태블릿·폰) ===== */
+    @media (max-width: 820px) {
+      .columns { grid-template-columns: 1fr; }   /* 두 칸을 위아래 한 줄로 쌓아요 */
+      .title { font-size: 1.5rem; }
+      .filters { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 420px) {
+      body { padding: 20px 12px 88px; }
+      .card { padding: 16px; }
+      .top svg { width: 36px; height: 36px; }
+      .title { font-size: 1.25rem; }
+      .article { padding: 12px; }
+      .btn { padding: 8px 10px; font-size: 0.85rem; }
+    }
+
+    /* 움직임 줄이기 설정을 쓰는 사람을 위한 배려 */
+    @media (prefers-reduced-motion: reduce) {
+      .article { animation: none; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <header class="top">
+      <!-- 도트 신문 그림 (장식용이라 화면 낭독기는 건너뛰어요) -->
+      <svg viewBox="0 0 16 16" shape-rendering="crispEdges" aria-hidden="true">
+        <rect x="1" y="2" width="14" height="12" fill="#000"/>
+        <rect x="2" y="3" width="12" height="10" fill="#f4f1e8"/>
+        <rect x="3" y="4" width="10" height="2" fill="#3f3f3f"/>
+        <rect x="3" y="7" width="4" height="4" fill="#8fd3f4"/>
+        <rect x="8" y="7" width="5" height="1" fill="#8b8b8b"/>
+        <rect x="8" y="9" width="5" height="1" fill="#8b8b8b"/>
+        <rect x="8" y="11" width="3" height="1" fill="#8b8b8b"/>
+      </svg>
+      <h1 class="title">독서·출판 아침 브리핑</h1>
+    </header>
+
+    <div class="columns">
+
+      <!-- ===== 왼쪽 칸: 브리핑 정보 + 키워드 고르기 ===== -->
+      <aside class="card">
+        <h2 class="section-title">브리핑 정보</h2>
+        <p class="info">
+          수집 시각 <b>2026-11-07 14:19</b><br>
+          언론사<br>· 경향신문 문화
+        </p>
+
+        <h2 class="section-title">키워드로 보기</h2>
+        <!-- 버튼을 누르면 그 키워드가 들어간 기사만 보여요. data-filter 값으로 골라요 -->
+        <div class="filters" id="filters">
+          <button type="button" class="btn" data-filter="all" aria-pressed="true">전체 <span class="count">5</span></button>
+          <button type="button" class="btn" data-filter="독서" aria-pressed="false">#독서 <span class="count">0</span></button>
+          <button type="button" class="btn" data-filter="출판" aria-pressed="false">#출판 <span class="count">3</span></button>
+          <button type="button" class="btn" data-filter="인공지능" aria-pressed="false">#인공지능 <span class="count">3</span></button>
+        </div>
+        <p class="help">키워드 기사를 먼저 고르고, 모자라면 최신 기사로 채웠어요.</p>
+      </aside>
+
+      <!-- ===== 오른쪽 칸: 기사 목록 ===== -->
+      <main class="card">
+        <h2 class="section-title">오늘의 기사</h2>
+        <!-- 기사마다 data-keywords에 걸린 키워드가 적혀 있어요 (키워드 버튼이 이걸 읽어요) -->
+        <div class="articles" id="articles">
+          <article class="article" data-keywords="인공지능" style="animation-delay: 0.00s">
+            <h3>“퇴직 사유 AI” 이세돌이 새로 배우는 ‘노동’…짠한데, 찡하다 [이진송의 아니 근데]</h3>
+            <ul class="tags"><li class="tag">#인공지능</li><li class="tag by">AI 요약</li></ul>
+            <ul class="summary"><li>KBS가 10월 23일에 예능 프로그램 &#x27;&lt;백수 이세돌&gt;&#x27;을 시작했습니다.</li><li>이 프로그램은 인공지능 알파고와 대국했던 이세돌 9단이 요구르트 배달에 나선 내용을 다룹니다.</li><li>자세한 내용은 원문 확인 필요</li></ul>
+            <p class="meta">
+              <span>경향신문 문화 · 2026-11-07 06:00</span>
+              <a class="item" href="https://www.khan.co.kr/article/202611070600011/?utm_source=khan_rss&amp;utm_medium=rss&amp;utm_campaign=culture_news" target="_blank" rel="noopener">원문 보기 ▶</a>
+            </p>
+          </article>
+          <article class="article" data-keywords="인공지능" style="animation-delay: 0.08s">
+            <h3>[책과 삶]AI의 역설, 다시 생명을 묻는다</h3>
+            <ul class="tags"><li class="tag">#인공지능</li><li class="tag by">AI 요약</li></ul>
+            <ul class="summary"><li>2023년 7월 일본 삿포로에서 열린 국제인공생명학회에서 SF 작가 테드 창과 신경과학자 아닐 세스는 생명과 의식을 주제로 이야기를 나눴다.</li><li>그해 3월 GPT-4가 등장하며 인공지능(AI)이 인간 지능을 넘어서는 ‘기술적 특이점’ 논의가 달아오르던 시기였다.</li><li>자세한 내용은 원문 확인 필요</li></ul>
+            <p class="meta">
+              <span>경향신문 문화 · 2026-11-05 20:52</span>
+              <a class="item" href="https://www.khan.co.kr/article/202611052052025/?utm_source=khan_rss&amp;utm_medium=rss&amp;utm_campaign=culture_news" target="_blank" rel="noopener">원문 보기 ▶</a>
+            </p>
+          </article>
+          <article class="article" data-keywords="출판" style="animation-delay: 0.16s">
+            <h3>[금요일의 문장]사람의 수명은 100년을 넘기기 어렵지만 기록의 수명은 수백 년이 넘는다</h3>
+            <ul class="tags"><li class="tag">#출판</li><li class="tag by">AI 요약</li></ul>
+            <ul class="summary"><li>고전 연구가 장유승의 책 &lt;이것은 전통이 아니다&gt;는 장유유서와 한국식 나이 등 우리가 전통이라 믿는 것들의 유래를 살핍니다.</li><li>이 책은 축하의 의미를 잃고 논쟁거리가 되어가는 축의금과 8만원에 이른 서울 예식장 평균 식대 이야기도 다룹니다.</li><li>자세한 내용은 원문 확인 필요</li></ul>
+            <p class="meta">
+              <span>경향신문 문화 · 2026-11-05 20:03</span>
+              <a class="item" href="https://www.khan.co.kr/article/202611052003025/?utm_source=khan_rss&amp;utm_medium=rss&amp;utm_campaign=culture_news" target="_blank" rel="noopener">원문 보기 ▶</a>
+            </p>
+          </article>
+          <article class="article" data-keywords="출판,인공지능" style="animation-delay: 0.24s">
+            <h3>판권에 ‘AI 학습 거부’ 못 박고, 사용료도 받고···유럽 출판계의 반격</h3>
+            <ul class="tags"><li class="tag">#출판</li><li class="tag">#인공지능</li><li class="tag by">AI 요약</li></ul>
+            <ul class="summary"><li>테크 기업이 동의 없이 인공지능(AI) 학습에 책을 활용하면서 한국 작가들의 책을 포함해 전 세계적인 문제가 되고 있습니다.</li><li>지난달 독일 프랑크푸르트 도서전에서 120여 개 출판사는 생성형 AI 기업에 출판사의 저작물 학습 내역을 투명하게 공개하라는 호소문을 냈습니다.</li><li>자세한 내용은 원문 확인 필요</li></ul>
+            <p class="meta">
+              <span>경향신문 문화 · 2026-11-05 16:57</span>
+              <a class="item" href="https://www.khan.co.kr/article/202611051657001/?utm_source=khan_rss&amp;utm_medium=rss&amp;utm_campaign=culture_news" target="_blank" rel="noopener">원문 보기 ▶</a>
+            </p>
+          </article>
+          <article class="article" data-keywords="출판" style="animation-delay: 0.32s">
+            <h3>한국출판인회 선정 ‘올해의 출판인’에 이광호 대표</h3>
+            <ul class="tags"><li class="tag">#출판</li><li class="tag by">AI 요약</li></ul>
+            <ul class="summary"><li>이광호 문학과지성사 대표가 한국출판인회의가 선정하는 ‘올해의 출판인’ 본상을 수상했다.</li><li>출판인회의는 4일 이 대표 등 ‘2026 올해의 출판인’ 7개 부분 수상자를 선정해 발표했다.</li><li>자세한 내용은 원문 확인 필요</li></ul>
+            <p class="meta">
+              <span>경향신문 문화 · 2026-11-04 20:21</span>
+              <a class="item" href="https://www.khan.co.kr/article/202611042021025/?utm_source=khan_rss&amp;utm_medium=rss&amp;utm_campaign=culture_news" target="_blank" rel="noopener">원문 보기 ▶</a>
+            </p>
+          </article>
+        </div>
+        <p class="empty" id="empty-message" hidden>이 키워드가 들어간 기사가 없어요.</p>
+        <p class="notice">AI 요약은 틀릴 수 있음. 자세한 내용은 원문을 확인해 주세요.</p>
+      </main>
+
+    </div>
+  </div>
+
+  <script>
+    /* ===== 키워드 버튼: 고른 키워드가 들어간 기사만 보여주기 ===== */
+    const filterButtons = document.querySelectorAll("#filters .btn");
+    const articleCards = document.querySelectorAll("#articles .article");
+    const emptyMessage = document.getElementById("empty-message");
+    let currentFilter = "all";   // 지금 고른 키워드 ("all" = 전체)
+
+    function showArticles(chosenFilter) {
+      // 같은 버튼을 또 누르면 바뀔 게 없으니 그냥 끝내요.
+      if (chosenFilter === currentFilter) return;
+      currentFilter = chosenFilter;
+
+      // 1단계: 고른 버튼만 초록색(눌린 상태)으로 바꿔요.
+      filterButtons.forEach(function (button) {
+        button.setAttribute("aria-pressed", String(button.dataset.filter === chosenFilter));
+      });
+
+      // 2단계: 기사마다 data-keywords를 읽어서, 고른 키워드가 있으면 보이고 없으면 숨겨요.
+      let visibleCount = 0;
+      articleCards.forEach(function (card) {
+        const keywords = card.dataset.keywords ? card.dataset.keywords.split(",") : [];
+        const isVisible = chosenFilter === "all" || keywords.includes(chosenFilter);
+        card.hidden = !isVisible;
+        if (isVisible) visibleCount += 1;
+      });
+
+      // 3단계: 보이는 기사가 하나도 없으면 안내 문구를 보여줘요.
+      emptyMessage.hidden = visibleCount > 0;
+    }
+
+    filterButtons.forEach(function (button) {
+      button.addEventListener("click", function () {
+        showArticles(button.dataset.filter);
+      });
+    });
+  </script>
+</body>
+</html>
