@@ -1,0 +1,61 @@
+# ===== 매일 아침 브리핑 자동 실행 (GitHub Actions) =====
+# 하는 일: GitHub의 컴퓨터가 매일 아침 briefing.py를 실행해서
+#          새 index.html과 news.json을 만들고, 이 저장소에 커밋해서 올려요.
+#          그래서 내 노트북을 꺼 둬도 브리핑이 새로 만들어져요.
+#          (Vercel을 이 저장소에 연결해 두면, 올라갈 때마다 웹 페이지도 자동으로 바뀌어요)
+#
+# 준비물: 저장소 Settings → Secrets and variables → Actions → New repository secret
+#         이름 GEMINI_API_KEY, 값은 .env에 넣었던 키
+#         (키는 이 파일이나 저장소에 절대 적지 않아요. GitHub가 비밀로 보관해요)
+
+name: 매일 아침 브리핑
+
+on:
+  schedule:
+    # ✏️ 1) 실행 시각: GitHub는 세계 표준시(UTC)를 써요. 한국 시간 = UTC + 9시간
+    #       "5 23 * * *" = UTC 23시 5분 = 한국 시간 다음 날 아침 8시 5분
+    #       (순서: 분 시 일 월 요일. 별표 * 는 "매번"이라는 뜻)
+    #       GitHub가 붐비면 몇 분~수십 분 늦게 시작할 수 있어요.
+    - cron: "5 23 * * *"
+  # Actions 탭에서 [Run workflow] 버튼으로 바로 실행해 볼 수 있게 해요.
+  workflow_dispatch:
+
+# 새 파일을 저장소에 올려야 해서 "쓰기" 권한을 줘요.
+permissions:
+  contents: write
+
+jobs:
+  briefing:
+    runs-on: ubuntu-latest      # GitHub가 빌려주는 리눅스 컴퓨터에서 실행해요
+    timeout-minutes: 15         # 15분이 넘게 걸리면 멈춰요 (Gemini가 계속 안 될 때 대비)
+
+    steps:
+      # 1단계: 저장소 파일을 GitHub 컴퓨터로 내려받아요.
+      - name: 저장소 내려받기
+        uses: actions/checkout@v4
+
+      # 2단계: Python을 준비해요. (설치할 추가 도구는 없어요)
+      - name: Python 준비
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # 3단계: 브리핑을 만들어요. 키는 저장소 비밀값에서 꺼내 환경 변수로 넘겨요.
+      #        (briefing.py는 .env가 없으면 환경 변수 GEMINI_API_KEY를 찾아요)
+      - name: 브리핑 만들기
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python briefing.py
+
+      # 4단계: 바뀐 index.html과 news.json만 커밋해서 올려요. 바뀐 게 없으면 건너뛰어요.
+      - name: 결과 올리기
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html news.json
+          if git diff --cached --quiet; then
+            echo "바뀐 내용이 없어서 올리지 않아요."
+          else
+            git commit -m "아침 브리핑 $(TZ=Asia/Seoul date +'%Y-%m-%d')"
+            git push
+          fi

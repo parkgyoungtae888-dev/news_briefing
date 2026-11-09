@@ -10,6 +10,7 @@
 import contextlib                # 화면 출력을 잠깐 다른 곳으로 돌리는 도구
 import io                        # 글자를 담아 두는 임시 그릇
 import json
+import os                        # 파일을 "더블클릭한 것처럼" 여는 도구. 브리핑 화면을 띄울 때 써요
 import subprocess                # 다른 프로그램(PowerShell)을 실행하는 도구. 알림 띄울 때 써요
 import traceback                 # 오류가 났을 때 자세한 내용을 글자로 만들어 주는 도구
 from datetime import datetime
@@ -19,8 +20,11 @@ FOLDER = Path(__file__).parent
 LAST_RUN_FILE = FOLDER / "last_run.txt"   # 마지막으로 실행한 날짜를 적어 두는 파일
 LOG_FILE = FOLDER / "daily_run.log"       # 실행 기록 (문제가 생겼을 때 원인 찾기용)
 NEWS_FILE = FOLDER / "news.json"
+PAGE_FILE = FOLDER / "index.html"         # 브라우저로 보는 브리핑 화면
 # ✏️ 1) 알림 제목: 글자만 바꾸면 돼요
 NOTICE_TITLE = "경제·IT 아침 브리핑"
+# ✏️ 2) 브리핑이 끝나면 브라우저로 화면을 바로 열지: True(연다) / False(알림만)
+OPEN_PAGE_AFTER_BRIEFING = True
 
 
 # ===== 2. 기록 남기기 =====
@@ -98,6 +102,14 @@ def main():
     #  (인터넷이 안 돼서 0개면, 다음에 켤 때 다시 시도하게)
     if article_count > 0:
         LAST_RUN_FILE.write_text(today, encoding="utf-8")
+        # 5단계: 브리핑 화면(index.html)을 기본 브라우저로 열어요.
+        #  알림은 오른쪽 아래에 작게 떴다 사라져서 놓치기 쉬워서, 화면을 직접 띄워 줘요.
+        if OPEN_PAGE_AFTER_BRIEFING:
+            try:
+                os.startfile(PAGE_FILE)
+                write_log("브리핑 화면을 브라우저로 열었어요")
+            except OSError:
+                write_log("브리핑 화면 열기 실패:\n" + traceback.format_exc())
     else:
         message += " (인터넷을 확인해 주세요. 다음에 켤 때 다시 해요)"
     show_notice(message)
