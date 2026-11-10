@@ -1,11 +1,41 @@
 {
-  "collected_at": "2026-11-09 19:23",
+  "collected_at": "2026-11-10 13:35",
   "keywords": [
     "드론",
     "하이닉스",
     "인공지능"
   ],
   "articles": [
+    {
+      "title": "안전 반영해도 값쌀까…원전 향한 ‘다른 질문’",
+      "link": "https://www.khan.co.kr/article/202611092041025/?utm_source=khan_rss&utm_medium=rss&utm_campaign=economy_news",
+      "date": "2026-11-09 20:41",
+      "source": "경향신문 경제",
+      "matched_keywords": [
+        "드론"
+      ],
+      "summary": [
+        "원전 확대에 비판적인 전문가들이 포럼을 열어 경제성과 전력 수요 등에 대한 검증을 촉구했습니다.",
+        "3대 메가프로젝트 등으로 전력 수요가 급증해 원전의 역할이 커질 것이란 전망 속에서도 원전의 경제성과 드론·미사일 공격 및 대형 사고에 대한 안전성 질문이 제기되고 있습니다.",
+        "자세한 내용은 원문 확인 필요"
+      ],
+      "summary_by": "gemini"
+    },
+    {
+      "title": "‘젠슨 황 파문’ 엔비디아 흔들리는 사이…구글, AMD 손잡고 자체 AI칩 공세",
+      "link": "https://www.khan.co.kr/article/202611101120011/?utm_source=khan_rss&utm_medium=rss&utm_campaign=economy_news",
+      "date": "2026-11-10 11:20",
+      "source": "경향신문 경제",
+      "matched_keywords": [
+        "인공지능"
+      ],
+      "summary": [
+        "엔비디아의 경영 불확실성이 커진 사이 구글이 자체 인공지능 반도체 사업에 속도를 내고 있다.",
+        "구글은 엔비디아의 경쟁사인 AMD와 협력하여 신제품을 선보이며 자체 반도체 생태계를 확대하고 있다.",
+        "구글은 8세대 텐서처리장치 신제품을 선보였다."
+      ],
+      "summary_by": "gemini"
+    },
     {
       "title": "“원전은 여전히 값쌀까, 공격받으면 안전할까”…원전 ‘다른 질문 포럼’ 출범",
       "link": "https://www.khan.co.kr/article/202611091529001/?utm_source=khan_rss&utm_medium=rss&utm_campaign=economy_news",
@@ -15,68 +45,38 @@
         "드론"
       ],
       "summary": [
-        "원전의 경제성과 안전성을 다루는 '다른 질문 포럼'이 출범했습니다.",
-        "전력수요 급증 전망 속에서 원전의 공격 대비 안전성과 대형 사고 위험성 등에 관한 질문이 제기되었습니다.",
+        "원전 확대 전망 속에서 원전의 경제성과 안전성에 대한 다양한 의문을 제기하는 원전 '다른 질문 포럼'이 출범했다.",
+        "포럼은 원전이 여전히 값싼 전력원인지, 드론이나 미사일 공격에 안전한지 등의 질문을 다룬다.",
         "자세한 내용은 원문 확인 필요"
       ],
       "summary_by": "gemini"
     },
     {
-      "title": "[단독]법인세 감면 혜택 30%, 상위 10대 기업에 쏠렸다",
-      "link": "https://www.khan.co.kr/article/202611090600081/?utm_source=khan_rss&utm_medium=rss&utm_campaign=economy_news",
-      "date": "2026-11-09 06:00",
-      "source": "경향신문 경제",
-      "matched_keywords": [
-        "하이닉스"
-      ],
-      "summary": [
-        "지난해 전체 법인세 공제·감면액의 약 30%가 삼성전자와 SK하이닉스 등 수입금액 상위 10대 기업에 집중된 것으로 나타났다.",
-        "대규모 세제 혜택에 힘입어 상위 10대 기업의 실제 법인세 부담률은 전체 법인 평균보다 낮았다.",
-        "자세한 내용은 원문 확인 필요"
-      ],
-      "summary_by": "gemini"
-    },
-    {
-      "title": "국산 AI 반도체, 엔비디아 생태계 올라탄다···SKT-리벨리온 3자 협력",
-      "link": "https://www.khan.co.kr/article/202611091440001/?utm_source=khan_rss&utm_medium=rss&utm_campaign=economy_news",
-      "date": "2026-11-09 14:40",
+      "title": "삼성SDI, AI 데이터센터용 UPS 배터리로 CES 혁신상 수상",
+      "link": "https://www.khan.co.kr/article/202611101120001/?utm_source=khan_rss&utm_medium=rss&utm_campaign=economy_news",
+      "date": "2026-11-10 11:20",
       "source": "경향신문 경제",
       "matched_keywords": [
         "인공지능"
       ],
       "summary": [
-        "엔비디아가 국내 AI 스타트업 리벨리온, SK텔레콤과 협력하여 자사 GPU와 국산 AI 반도체를 함께 쓰는 데이터센터 시스템 개발에 나섭니다.",
-        "해당 시스템은 AI가 질문을 분석하는 일은 GPU가, 답변을 만드는 일은 국산 반도체가 나눠 맡는 방식입니다.",
-        "자세한 내용은 원문 확인 필요"
+        "삼성SDI가 인공지능 데이터센터용 무정전전원장치 배터리로 세계 최대 전자·정보기술 전시회의 혁신상을 수상했다.",
+        "이번 수상은 초고출력과 화재 안전성을 인정받은 결과다.",
+        "삼성SDI는 해당 전시회 행사에 처음 출품한 뒤 3년 연속으로 수상했다."
       ],
       "summary_by": "gemini"
     },
     {
-      "title": "대기업 제조업 생산 역대 최고…중소기업과 격차도 역대 최대",
-      "link": "https://www.khan.co.kr/article/202611081528001/?utm_source=khan_rss&utm_medium=rss&utm_campaign=economy_news",
-      "date": "2026-11-08 15:28",
-      "source": "경향신문 경제",
-      "matched_keywords": [
-        "하이닉스"
-      ],
-      "summary": [
-        "올해 3분기 대기업 제조업 생산이 통계 작성 이후 최대를 기록한 반면 중소기업 제조업 생산은 1년 전보다 줄었습니다.",
-        "대기업과 중소기업의 생산지수 격차가 역대 최대로 벌어지며 제조업 안에서 양극화가 깊어지고 있습니다.",
-        "자세한 내용은 원문 확인 필요"
-      ],
-      "summary_by": "gemini"
-    },
-    {
-      "title": "미 ‘데이터센터 건설’ 규제…한국에 기회? 리스크?",
-      "link": "https://www.khan.co.kr/article/202611082026005/?utm_source=khan_rss&utm_medium=rss&utm_campaign=economy_news",
-      "date": "2026-11-08 20:26",
+      "title": "“일자리 많이 늘어” “지하수 오염 걱정”···반도체 거점된 구마모토엔 활기와 위기가 공존한다",
+      "link": "https://www.khan.co.kr/article/202611100600151/?utm_source=khan_rss&utm_medium=rss&utm_campaign=economy_news",
+      "date": "2026-11-10 06:00",
       "source": "경향신문 경제",
       "matched_keywords": [
         "인공지능"
       ],
       "summary": [
-        "미국 내 인공지능 데이터센터 건설 규제가 강화될 것이란 전망에 따라 이를 한국의 기회로 삼아야 한다는 주장이 나오고 있습니다.",
-        "오픈AI와 메타 등의 국외 검토 언급에 정치권의 국내 유치 호응이 잇따르고 있으나 AI 투자 거품론과 우려도 제기되고 있습니다.",
+        "구마모토는 반도체 거점이 되면서 일자리가 늘어나는 활기와 지하수 오염을 걱정하는 위기가 공존하고 있다.",
+        "이재명 정부의 3대 메가프로젝트는 반도체 초호황 속에서 AI 산업 주도권을 쥐기 위한 도전적 목표를 담고 있다.",
         "자세한 내용은 원문 확인 필요"
       ],
       "summary_by": "gemini"
