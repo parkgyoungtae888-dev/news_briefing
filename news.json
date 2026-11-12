@@ -1,5 +1,5 @@
 {
-  "collected_at": "2026-11-12 12:46",
+  "collected_at": "2026-11-12 19:50",
   "keywords": [
     "드론",
     "하이닉스",
@@ -7,76 +7,76 @@
   ],
   "articles": [
     {
-      "title": "“AI, 신용점수 외 ‘보이지 않는 상환능력’ 찾을 수 있어”",
-      "link": "https://www.khan.co.kr/article/202611112135005/?utm_source=khan_rss&utm_medium=rss&utm_campaign=economy_news",
-      "date": "2026-11-11 21:35",
-      "source": "경향신문 경제",
+      "title": "엔비디아 독주에 균열 갈까…시장에선 삼성↑, 하이닉스↓",
+      "link": "https://www.hani.co.kr/arti/economy/global/1287092.html",
+      "date": null,
+      "source": "한겨레 경제",
       "matched_keywords": [
-        "인공지능"
+        "하이닉스"
       ],
       "summary": [
-        "손병두 토스인사이트 대표는 인공지능(AI)과 데이터가 기술을 통해 보이지 않던 상환능력을 보여주고 포용금융의 새로운 길을 열어줄 수 있다고 11일 밝혔다.",
-        "데이터는 금리 단층 및 필연적 소외 계층 양산 문제와 관련해 고객에 대한 새로운 시각을 제시한다.",
+        "한겨레 경제는 엔비디아의 독주에 균열이 발생할지에 대한 내용을 다루고 있습니다.",
+        "시장에서는 삼성은 상승하고 하이닉스는 하락하는 양상을 보이고 있습니다.",
         "자세한 내용은 원문 확인 필요"
       ],
       "summary_by": "gemini"
     },
     {
-      "title": "“앨리스 황, 미국산 AI반도체 10조원어치 중국 우회 반입 의혹”",
-      "link": "https://www.khan.co.kr/article/202611112109015/?utm_source=khan_rss&utm_medium=rss&utm_campaign=economy_news",
-      "date": "2026-11-11 21:09",
+      "title": "[단독]AI 에이전트 ‘피클’ 코레일 접근 안 된다···미국선 항공사도 AI 차단",
+      "link": "https://www.khan.co.kr/article/202611121711011/?utm_source=khan_rss&utm_medium=rss&utm_campaign=economy_news",
+      "date": "2026-11-12 17:11",
       "source": "경향신문 경제",
       "matched_keywords": [
         "인공지능"
       ],
       "summary": [
-        "중국인 사업가 앨리스 황이 젠슨 황 엔비디아 CEO와의 친분을 활용해 미국산 AI 반도체를 중국 기업에 공급했다는 의혹이 제기됐습니다.",
-        "해당 반도체는 엔비디아 H100·H200 등 약 24만 개, 10조 원어치로 중국·싱가포르·말레이시아 기업망을 통해 우회 반입됐습니다.",
-        "로이터통신은 10일 미 IT 전문매체를 인용해 이 같은 내용을 보도했습니다."
-      ],
-      "summary_by": "gemini"
-    },
-    {
-      "title": "AI 답변에서 ‘답’을 찾아라",
-      "link": "https://www.khan.co.kr/article/202611112039015/?utm_source=khan_rss&utm_medium=rss&utm_campaign=economy_news",
-      "date": "2026-11-11 20:39",
-      "source": "경향신문 경제",
-      "matched_keywords": [
-        "인공지능"
-      ],
-      "summary": [
-        "AI 시대가 되면서 소비자들이 'AI 추천'을 중시함에 따라 마케팅 판도가 바뀌고 있습니다.",
-        "과거 기업들은 네이버와 구글 등 웹사이트 검색에 초점을 맞췄으나, 이제는 브랜드를 AI에 우호적으로 학습시키고 생성형 엔진을 겨냥하는 방식으로 변화하고 있습니다.",
+        "인공지능 에이전트 ‘피클’에 대해 코레일이 접근을 차단한 것으로 나타났습니다.",
+        "코레일은 최근 피클을 포함해 매크로와 AI 에이전트 등 자동화 프로그램 전반에 대해 차단 조치를 취했습니다.",
         "자세한 내용은 원문 확인 필요"
       ],
       "summary_by": "gemini"
     },
     {
-      "title": "한국 디지털·AI 경쟁력 ‘세계 10위’",
-      "link": "https://www.khan.co.kr/article/202611112033005/?utm_source=khan_rss&utm_medium=rss&utm_campaign=economy_news",
-      "date": "2026-11-11 20:33",
+      "title": "후계자 없는 엔비디아···젠슨 황 ‘이중 불륜’에 해임 급물살, 차기 CEO로 유력한 인물은?",
+      "link": "https://www.khan.co.kr/article/202611121704001/?utm_source=khan_rss&utm_medium=rss&utm_campaign=economy_news",
+      "date": "2026-11-12 17:04",
       "source": "경향신문 경제",
       "matched_keywords": [
         "인공지능"
       ],
       "summary": [
-        "한국이 스위스 국제경영개발대학원(IMD)의 세계 디지털·AI 경쟁력 평가에서 70개국 중 10위를 기록해 지난해보다 8단계 상승했습니다.",
-        "한국은 GDP 대비 R&D 지출 부문에서 1위를 차지했습니다.",
+        "엔비디아 이사회가 불륜 관계를 시인한 젠슨 황 최고경영자(CEO)에 대한 해임 논의 절차를 시작했습니다.",
+        "1993년 창업 이래 회사를 이끌어 온 젠슨 황 CEO 체제가 막을 내릴 위기에 처했습니다.",
         "자세한 내용은 원문 확인 필요"
       ],
       "summary_by": "gemini"
     },
     {
-      "title": "포스코·GS 손잡고 ‘AI 데이터센터 사업’ 미래로",
-      "link": "https://www.khan.co.kr/article/202611112031015/?utm_source=khan_rss&utm_medium=rss&utm_campaign=economy_news",
-      "date": "2026-11-11 20:31",
+      "title": "퇴근 뒤 카톡 맡기고, 안개 속 길 찾고…과기원 AI 스타트업의 ‘출항’",
+      "link": "https://www.khan.co.kr/article/202611121550001/?utm_source=khan_rss&utm_medium=rss&utm_campaign=economy_news",
+      "date": "2026-11-12 15:50",
       "source": "경향신문 경제",
       "matched_keywords": [
         "인공지능"
       ],
       "summary": [
-        "포스코와 GS그룹이 인공지능(AI) 데이터센터 사업 분야에서 전략적 협력에 나섭니다.",
-        "포스코의 고품질 철강 소재·솔루션과 GS그룹의 데이터센터 구축·운영 역량이 만나 시너지 효과를 낼 것으로 기대됩니다.",
+        "카카오의 인공지능(AI) 창업 경진대회인 ‘출항 2기’가 열렸습니다.",
+        "김도영 카카오인베스트먼트 대표가 대회 이름의 뜻을 설명하고 에프이십이 정필원 대표가 발표를 진행했습니다.",
+        "자세한 내용은 원문 확인 필요"
+      ],
+      "summary_by": "gemini"
+    },
+    {
+      "title": "네이버, AI 팩토리 첫 고객 확보…투자 부담 덜 새 수익원 될까",
+      "link": "https://www.khan.co.kr/article/202611121532001/?utm_source=khan_rss&utm_medium=rss&utm_campaign=economy_news",
+      "date": "2026-11-12 15:32",
+      "source": "경향신문 경제",
+      "matched_keywords": [
+        "인공지능"
+      ],
+      "summary": [
+        "네이버는 AI 투자 부담으로 영업이익이 줄어든 가운데 'AI 팩토리'의 첫 고객을 확보했습니다.",
+        "AI 연산 자원 판매로 사업을 넓히고 있으며 2조원 규모의 첫 수주가 새 수익원이 될지 주목받고 있습니다.",
         "자세한 내용은 원문 확인 필요"
       ],
       "summary_by": "gemini"
