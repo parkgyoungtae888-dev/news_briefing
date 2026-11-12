@@ -699,6 +699,9 @@ def main():
     # 4단계: 키워드(주제)마다 돌아가며 골고루 골라서 최대 MAX_ARTICLES개를 만들어요.
     #        모자라면 키워드 없는 최신 기사로 채워요.
     picked = pick_balanced(all_articles, keywords, MAX_ARTICLES)
+    # 고른 5개를 날짜 최신 순으로 다시 줄 세워요. (고를 때는 키워드 순서로 섞여 있어서)
+    #  날짜가 없는 기사는 맨 뒤로 가요.
+    picked.sort(key=newest_first_key)
 
     # 5단계: 고른 기사마다 세 줄 요약을 붙여요. (Gemini → 안 되면 소개문으로 대신)
     api_key = load_api_key()
