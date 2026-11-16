@@ -1,5 +1,5 @@
 {
-  "collected_at": "2026-11-15 11:32",
+  "collected_at": "2026-11-16 11:41",
   "keywords": [
     "드론",
     "하이닉스",
@@ -7,76 +7,77 @@
   ],
   "articles": [
     {
-      "title": "삼성SDI, 미국산 LFP ESS로 북미 공략…LG엔솔은 ‘AI 전력 인프라’",
-      "link": "https://www.khan.co.kr/article/202611151123001/?utm_source=khan_rss&utm_medium=rss&utm_campaign=economy_news",
-      "date": "2026-11-15 11:23",
+      "title": "[르포]SK하이닉스 용인 팹 한 켠에 소부장 기업 위한 ‘공유 인프라’",
+      "link": "https://www.khan.co.kr/article/202611161130001/?utm_source=khan_rss&utm_medium=rss&utm_campaign=economy_news",
+      "date": "2026-11-16 11:30",
       "source": "경향신문 경제",
       "matched_keywords": [
-        "인공지능"
+        "하이닉스"
       ],
       "summary": [
-        "국내 배터리 기업들이 북미 최대 에너지 전시회 ‘RE+ 2026’에 참가했습니다.",
-        "기업들은 인공지능(AI) 데이터센터 전력 시장을 겨냥해 미국 현지 생산 제품을 앞세웠습니다.",
-        "삼성SDI는 미국산 LFP ESS로 북미 시장을 공략하며 LG에너지솔루션은 AI 전력 인프라를 내세워 경쟁합니다."
-      ],
-      "summary_by": "gemini"
-    },
-    {
-      "title": "코딩 AI 비용 최대 90% ‘뚝’…LG유플러스, ‘토큰 절감’ 사업 뛰어든다",
-      "link": "https://www.khan.co.kr/article/202611151013001/?utm_source=khan_rss&utm_medium=rss&utm_campaign=economy_news",
-      "date": "2026-11-15 10:13",
-      "source": "경향신문 경제",
-      "matched_keywords": [
-        "인공지능"
-      ],
-      "summary": [
-        "LG유플러스가 인공지능(AI) 에이전트 운영 비용을 줄이는 기술을 앞세워 내년 기업용 AI 시장에 진출한다.",
-        "이상엽 LG유플러스 최고기술책임자(CTO·전무)가 지난 12일 기자들을 대상으로 ‘AI 토큰 최적화 스터디’를 열고 발표를 진행했다.",
+        "SK하이닉스가 용인 트리니티 팹에 소부장 기업을 위한 공유 인프라를 제공합니다.",
+        "이곳은 D램 및 HBM 생산라인과 동일한 양산 검증 환경을 갖춰 소부장 생태계 경쟁력 강화를 지원합니다.",
         "자세한 내용은 원문 확인 필요"
       ],
       "summary_by": "gemini"
     },
     {
-      "title": "중기부 2차 ‘모두의 창업’ 참가자 818명 개인정보 유출",
-      "link": "https://www.khan.co.kr/article/202611131802001/?utm_source=khan_rss&utm_medium=rss&utm_campaign=economy_news",
-      "date": "2026-11-13 18:02",
+      "title": "AI가 알려주는 ‘찍기’ 운에 맡기는 ‘잡기’…‘첨단’ 날개 달고 진화하는 커닝, 못 쫓아가는 보안",
+      "link": "https://www.khan.co.kr/article/202611152118015/?utm_source=khan_rss&utm_medium=rss&utm_campaign=economy_news",
+      "date": "2026-11-15 21:18",
       "source": "경향신문 경제",
       "matched_keywords": [
         "인공지능"
       ],
       "summary": [
-        "중소벤처기업부의 2차 ‘모두의 창업’ 프로젝트 참가자 818명의 개인정보가 외부 해킹으로 유출됐습니다.",
-        "유출은 중기부 자체 시스템이 아닌 프로젝트에 참여한 민간 인공지능(AI) 솔루션 공급기업 50곳 중 한 곳이 해킹 공격을 받아 발생했습니다.",
+        "초소형 카메라로 촬영한 시험지 문제를 인공지능(AI)이 풀고 답을 안경이나 무선 이어폰으로 전달하는 커닝이 등장했습니다.",
+        "커닝 기기가 반지나 펜 등으로 소형화되고 다양해져 식별이 어렵고 전파탐지에도 한계가 있습니다.",
+        "진화하는 커닝 기술을 보안이 쫓아가지 못하면서 학교 시험이 사실상 무방비 상태에 처해 있습니다."
+      ],
+      "summary_by": "gemini"
+    },
+    {
+      "title": "LGU+, AI 토큰 비용 90% 절감 기술로 내년 기업용 시장 진출",
+      "link": "https://www.khan.co.kr/article/202611152035025/?utm_source=khan_rss&utm_medium=rss&utm_campaign=economy_news",
+      "date": "2026-11-15 20:35",
+      "source": "경향신문 경제",
+      "matched_keywords": [
+        "인공지능"
+      ],
+      "summary": [
+        "LG유플러스는 인공지능(AI) 에이전트 운영 비용을 줄이는 기술을 앞세워 내년 기업용 AI 시장에 진출합니다.",
+        "모델 선택부터 반도체 운용까지 최적화해 기업의 AI 도입 부담을 낮추겠다는 구상입니다.",
         "자세한 내용은 원문 확인 필요"
       ],
       "summary_by": "gemini"
     },
     {
-      "title": "[속보] 중기부 “2차 ‘모두의 창업’ 참가자 지원 기업서 개인정보 유출”",
-      "link": "https://www.khan.co.kr/article/202611131729001/?utm_source=khan_rss&utm_medium=rss&utm_campaign=economy_news",
-      "date": "2026-11-13 17:29",
+      "title": "K반도체 ‘억’ 소리나는데 성장 온기는?···“K자형 경제구조, 내수 파급 제약”",
+      "link": "https://www.khan.co.kr/article/202611151702001/?utm_source=khan_rss&utm_medium=rss&utm_campaign=economy_news",
+      "date": "2026-11-15 17:02",
       "source": "경향신문 경제",
       "matched_keywords": [
+        "하이닉스",
         "인공지능"
       ],
       "summary": [
-        "중소벤처기업부가 진행 중인 2차 ‘모두의 창업’ 참가자 개인정보 유출 사고가 발생했습니다.",
-        "인공지능(AI) 솔루션 공급기업인 아미쿠스렉스의 시스템에서 해킹 공격이 발생한 것으로 확인됐습니다.",
-        "중기부는 이 해킹 공격으로 참가자 818명의 개인정보가 유출됐다고 13일 밝혔습니다."
+        "인공지능(AI) 발 반도체 호황으로 한국 경제가 깜짝 성장했습니다.",
+        "정보기술(IT)과 그 외로 갈린 K자형 경제구조 등이 국내 소비 회복의 걸림돌이 될 것이라는 분석이 나왔습니다.",
+        "자세한 내용은 원문 확인 필요"
       ],
       "summary_by": "gemini"
     },
     {
-      "title": "엔비디아 독주에 균열 갈까…시장에선 삼성↑, 하이닉스↓",
-      "link": "https://www.hani.co.kr/arti/economy/global/1287092.html",
+      "title": "SK하이닉스 용인 ‘소부장 전용 팹’…K-반도체 생태계 키운다",
+      "link": "https://www.hani.co.kr/arti/economy/marketing/1287476.html",
       "date": null,
       "source": "한겨레 경제",
       "matched_keywords": [
         "하이닉스"
       ],
       "summary": [
-        "한겨레 경제에서 엔비디아 독주에 균열이 갈지에 대해 다루었습니다.",
-        "시장에서는 삼성은 오르고 하이닉스는 내리는 양상을 보이고 있습니다.",
+        "SK하이닉스가 용인에 '소부장 전용 팹'을 통해 K-반도체 생태계를 키운다는 내용입니다.",
+        "한겨레 경제에서 보도한 기사 정보입니다.",
         "자세한 내용은 원문 확인 필요"
       ],
       "summary_by": "gemini"
