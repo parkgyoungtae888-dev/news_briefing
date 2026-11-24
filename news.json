@@ -1,5 +1,5 @@
 {
-  "collected_at": "2026-11-23 12:40",
+  "collected_at": "2026-11-24 15:54",
   "keywords": [
     "드론",
     "하이닉스",
@@ -7,76 +7,76 @@
   ],
   "articles": [
     {
-      "title": "포스코, ‘AX혁신’ 가속···생산부터 사무까지 전 영역 AI 전환",
-      "link": "https://www.khan.co.kr/article/202611231123001/?utm_source=khan_rss&utm_medium=rss&utm_campaign=economy_news",
-      "date": "2026-11-23 11:23",
+      "title": "삼성전자 임원 131명 승진 인사…HBM·로봇 인재 발탁",
+      "link": "https://www.khan.co.kr/article/202611241114001/?utm_source=khan_rss&utm_medium=rss&utm_campaign=economy_news",
+      "date": "2026-11-24 11:14",
       "source": "경향신문 경제",
       "matched_keywords": [
         "인공지능"
       ],
       "summary": [
-        "포스코는 지난 8월 서울 포스코센터에 임직원들의 AX 혁신 거점인 ‘AX Lab’을 오픈했다.",
-        "포스코는 철강 생산 현장은 물론 마케팅·구매·경영지원 등 사무업무 전반에 AX(인공지능 전환)를 가속화해 미래 경쟁력 확보에 나선다.",
-        "포스코는 올해 8월 반기보고서를 통해 ‘포스코 특화 AI 제철소 구현’을 회사의 주요 경쟁우위 요소로 제시했다."
-      ],
-      "summary_by": "gemini"
-    },
-    {
-      "title": "최태원 “AI 네이티브 시대엔 지혜 중심 교육을”",
-      "link": "https://www.khan.co.kr/article/202611222030035/?utm_source=khan_rss&utm_medium=rss&utm_campaign=economy_news",
-      "date": "2026-11-22 20:30",
-      "source": "경향신문 경제",
-      "matched_keywords": [
-        "인공지능"
-      ],
-      "summary": [
-        "최태원 SK그룹 회장은 대학이 '인공지능(AI) 네이티브 시대'에 맞는 새로운 교육 체계를 갖춰야 한다고 말했습니다.",
-        "최 회장은 지난 20~21일 일본 도쿄대에서 열린 '도쿄포럼 2026'에 참석해 AI가 만든 가치가 폭넓게 공유되도록 변화의 방향을 이끌 인재를 키워야 한다고 말했습니다.",
+        "삼성전자가 반도체 부문과 미래 성장동력 분야 인재들을 임원으로 발탁하는 정기 임원 인사를 단행했다.",
+        "이번 인사에서 부사장, 상무, 펠로우, 마스터를 포함해 총 131명이 승진했다.",
         "자세한 내용은 원문 확인 필요"
       ],
       "summary_by": "gemini"
     },
     {
-      "title": "최태원, “AI 네이티브 시대, 대학은 지식보다 지혜 기르는 데 집중해야”",
-      "link": "https://www.khan.co.kr/article/202611221212001/?utm_source=khan_rss&utm_medium=rss&utm_campaign=economy_news",
-      "date": "2026-11-22 12:12",
+      "title": "[속보]‘오늘은 매수사이드카’···나스닥 6.5% 폭등 마감, 1년 7개월 만에 상승 폭 최고",
+      "link": "https://www.khan.co.kr/article/202611240655001/?utm_source=khan_rss&utm_medium=rss&utm_campaign=economy_news",
+      "date": "2026-11-24 06:55",
       "source": "경향신문 경제",
       "matched_keywords": [
         "인공지능"
       ],
       "summary": [
-        "최태원 SK그룹 회장은 인공지능(AI) 네이티브 시대에 대학이 지식보다 지혜를 기르는 데 집중하고 새로운 교육 체계를 갖춰야 한다고 강조했습니다.",
-        "최 회장은 지난 21일 일본 도쿄대 야스다 강당에서 열린 ‘도쿄포럼 2026’ 비즈니스리더 세션에서 AI 네이티브 사회를 위한 교육과 인재 육성에 대해 발표했습니다.",
+        "젠슨 황 엔비디아 최고경영자(CEO)의 복귀 소식과 엔비디아 주가 폭등의 영향으로 뉴욕증시 3대 주가지수가 일제히 급등 마감했다.",
+        "특히 기술주 중심의 나스닥 종합지수는 큰 폭으로 올랐으며, 이는 1년 7개월 만에 최고 상승 폭을 기록했다.",
         "자세한 내용은 원문 확인 필요"
       ],
       "summary_by": "gemini"
     },
     {
-      "title": "엔비디아 14% 폭락에 코스피 5000피 붕괴까지···무서운 월요일 증시, 어디까지 내려갈래",
-      "link": "https://www.khan.co.kr/article/202611221110001/?utm_source=khan_rss&utm_medium=rss&utm_campaign=economy_news",
-      "date": "2026-11-22 11:10",
+      "title": "‘젠슨황 부활’ 엔비디아 32% 폭등 마감···시총 1300조원 늘어",
+      "link": "https://www.khan.co.kr/article/202611240650001/?utm_source=khan_rss&utm_medium=rss&utm_campaign=economy_news",
+      "date": "2026-11-24 06:50",
       "source": "경향신문 경제",
       "matched_keywords": [
         "인공지능"
       ],
       "summary": [
-        "지난 20일 코스피와 코스닥이 5% 넘게 급락하며 코스피는 4,869.96에 거래를 마쳤습니다.",
-        "23일 국내 증시는 인공지능(AI) 관련주를 중심으로 급락한 뉴욕증시의 영향을 받아 약세로 출발할 것으로 예상됩니다.",
+        "젠슨 황 엔비디아 최고경영자(CEO)의 복귀 소식으로 엔비디아 주가가 32% 폭등 마감했다.",
+        "하루 동안 늘어난 시가총액만 1300조원에 달하며 마이크론과 샌디스크 등 인공지능(AI) 반도체주도 일제히 급등했다.",
         "자세한 내용은 원문 확인 필요"
       ],
       "summary_by": "gemini"
     },
     {
-      "title": "인공지능 생성 얼굴을 가려내는 6가지 기준",
-      "link": "https://www.hani.co.kr/arti/science/science_general/1287655.html",
-      "date": null,
-      "source": "한겨레 미래&과학",
+      "title": "코스피 4700 턱걸이",
+      "link": "https://www.khan.co.kr/article/202611232123015/?utm_source=khan_rss&utm_medium=rss&utm_campaign=economy_news",
+      "date": "2026-11-23 21:23",
+      "source": "경향신문 경제",
       "matched_keywords": [
         "인공지능"
       ],
       "summary": [
-        "한겨레 미래&과학에서 '인공지능 생성 얼굴을 가려내는 6가지 기준'에 대한 기사를 제공한다.",
-        "제공된 정보에는 기사 제목만 존재하고 세부 내용이 포함되어 있지 않다.",
+        "코스피 지수가 미국발 인공지능 거품론과 금리 인상 가능성으로 3% 넘게 하락했다.",
+        "이번 하락으로 코스피는 4700대 초반까지 후퇴했다.",
+        "정부의 대책 언급이 대규모 폭락을 막았다는 평가가 나온다."
+      ],
+      "summary_by": "gemini"
+    },
+    {
+      "title": "정부, 증안펀드 규모 확대 검토 거론…전기차 세액공제엔 ‘신중’",
+      "link": "https://www.khan.co.kr/article/202611232112015/?utm_source=khan_rss&utm_medium=rss&utm_campaign=economy_news",
+      "date": "2026-11-23 21:12",
+      "source": "경향신문 경제",
+      "matched_keywords": [
+        "인공지능"
+      ],
+      "summary": [
+        "이형일 부총리 겸 재정경제부 장관은 최근 증시 변동성 확대와 관련해 정부의 시장 안정 의지를 밝혔다.",
+        "이 부총리는 시장 상황을 자세히 모니터링하며 이미 마련된 추가 대책을 적절한 시기에 시행하겠다고 전했다.",
         "자세한 내용은 원문 확인 필요"
       ],
       "summary_by": "gemini"
