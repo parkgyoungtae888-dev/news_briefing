@@ -1,5 +1,5 @@
 {
-  "collected_at": "2026-11-24 15:54",
+  "collected_at": "2026-11-25 14:22",
   "keywords": [
     "드론",
     "하이닉스",
@@ -7,76 +7,76 @@
   ],
   "articles": [
     {
-      "title": "삼성전자 임원 131명 승진 인사…HBM·로봇 인재 발탁",
-      "link": "https://www.khan.co.kr/article/202611241114001/?utm_source=khan_rss&utm_medium=rss&utm_campaign=economy_news",
-      "date": "2026-11-24 11:14",
+      "title": "AI 시대 대비, KT-LG전자 데이터 업로드 용량 늘리는 6G 기술 검증",
+      "link": "https://www.khan.co.kr/article/202611251022011/?utm_source=khan_rss&utm_medium=rss&utm_campaign=economy_news",
+      "date": "2026-11-25 10:22",
       "source": "경향신문 경제",
       "matched_keywords": [
         "인공지능"
       ],
       "summary": [
-        "삼성전자가 반도체 부문과 미래 성장동력 분야 인재들을 임원으로 발탁하는 정기 임원 인사를 단행했다.",
-        "이번 인사에서 부사장, 상무, 펠로우, 마스터를 포함해 총 131명이 승진했다.",
+        "KT가 LG전자와 함께 인공지능(AI) 시대에 대비해 6G 핵심 기술을 검증했다고 25일 밝혔다.",
+        "지난 9월 서울 서초구 LG전자 사옥에서 네트워크 장비를 이용해 데이터 업로드 용량을 5G 대비 최대 4.9배 높이는 기술을 검증했다.",
         "자세한 내용은 원문 확인 필요"
       ],
       "summary_by": "gemini"
     },
     {
-      "title": "[속보]‘오늘은 매수사이드카’···나스닥 6.5% 폭등 마감, 1년 7개월 만에 상승 폭 최고",
-      "link": "https://www.khan.co.kr/article/202611240655001/?utm_source=khan_rss&utm_medium=rss&utm_campaign=economy_news",
-      "date": "2026-11-24 06:55",
+      "title": "트럼프 추가관세·젠슨 황 복귀효과 소진에 미국 증시 부진···엔트로픽 공모가 밑돌아",
+      "link": "https://www.khan.co.kr/article/202611250720001/?utm_source=khan_rss&utm_medium=rss&utm_campaign=economy_news",
+      "date": "2026-11-25 07:20",
       "source": "경향신문 경제",
       "matched_keywords": [
         "인공지능"
       ],
       "summary": [
-        "젠슨 황 엔비디아 최고경영자(CEO)의 복귀 소식과 엔비디아 주가 폭등의 영향으로 뉴욕증시 3대 주가지수가 일제히 급등 마감했다.",
-        "특히 기술주 중심의 나스닥 종합지수는 큰 폭으로 올랐으며, 이는 1년 7개월 만에 최고 상승 폭을 기록했다.",
+        "미국 뉴욕증시의 3대 주요 주가지수가 24일 인공지능 관련 기술주를 중심으로 차익실현 매물이 출회되면서 혼조세로 마감했다.",
+        "트럼프 미 행정부의 추가 관세 부과 가능성과 젠슨 황 엔비디아 최고경영자의 복귀효과 소진 등이 증시 부진 요인으로 작용했다.",
         "자세한 내용은 원문 확인 필요"
       ],
       "summary_by": "gemini"
     },
     {
-      "title": "‘젠슨황 부활’ 엔비디아 32% 폭등 마감···시총 1300조원 늘어",
-      "link": "https://www.khan.co.kr/article/202611240650001/?utm_source=khan_rss&utm_medium=rss&utm_campaign=economy_news",
-      "date": "2026-11-24 06:50",
+      "title": "하루 만에 끝나버린 ‘젠슨 황 복귀 효과’···반도체주 급락, 상승분 60% 반납",
+      "link": "https://www.khan.co.kr/article/202611250711001/?utm_source=khan_rss&utm_medium=rss&utm_campaign=economy_news",
+      "date": "2026-11-25 07:11",
       "source": "경향신문 경제",
       "matched_keywords": [
         "인공지능"
       ],
       "summary": [
-        "젠슨 황 엔비디아 최고경영자(CEO)의 복귀 소식으로 엔비디아 주가가 32% 폭등 마감했다.",
-        "하루 동안 늘어난 시가총액만 1300조원에 달하며 마이크론과 샌디스크 등 인공지능(AI) 반도체주도 일제히 급등했다.",
+        "젠슨 황 엔비디아 최고경영자 복귀 효과에 대한 시장의 의구심으로 24일 미국 증시에서 인공지능 반도체주가 일제히 급락세를 보였습니다.",
+        "엔비디아는 6% 가까이 급락했고 마이크론은 전날 상승분 대부분을 반납했습니다.",
         "자세한 내용은 원문 확인 필요"
       ],
       "summary_by": "gemini"
     },
     {
-      "title": "코스피 4700 턱걸이",
-      "link": "https://www.khan.co.kr/article/202611232123015/?utm_source=khan_rss&utm_medium=rss&utm_campaign=economy_news",
-      "date": "2026-11-23 21:23",
+      "title": "매출 사상 최대, 주가는 7년 전으로…AI 시대 위기 맞은 네카오 ‘플랫폼 성공 공식’",
+      "link": "https://www.khan.co.kr/article/202611250600121/?utm_source=khan_rss&utm_medium=rss&utm_campaign=economy_news",
+      "date": "2026-11-25 06:00",
       "source": "경향신문 경제",
       "matched_keywords": [
         "인공지능"
       ],
       "summary": [
-        "코스피 지수가 미국발 인공지능 거품론과 금리 인상 가능성으로 3% 넘게 하락했다.",
-        "이번 하락으로 코스피는 4700대 초반까지 후퇴했다.",
-        "정부의 대책 언급이 대규모 폭락을 막았다는 평가가 나온다."
+        "네이버와 카카오는 역대 최대급 매출을 올렸으나 주가는 하락을 거듭해 약 7년 만의 최저 수준에 머물러 있습니다.",
+        "두 회사의 외형은 꾸준히 성장했으나 시장의 평가는 오히려 뒷걸음질 친 상황입니다.",
+        "인공지능(AI)이 지난 10여 년간 두 회사의 성장을 이끌어온 플랫폼 성공 공식 자체를 흔들고 있다는 분석이 나옵니다."
       ],
       "summary_by": "gemini"
     },
     {
-      "title": "정부, 증안펀드 규모 확대 검토 거론…전기차 세액공제엔 ‘신중’",
-      "link": "https://www.khan.co.kr/article/202611232112015/?utm_source=khan_rss&utm_medium=rss&utm_campaign=economy_news",
-      "date": "2026-11-23 21:12",
+      "title": "젠슨 황 복귀에 삼전닉스 일단 ‘안도’…대중 수출통제 강화 등은 변수",
+      "link": "https://www.khan.co.kr/article/202611241650001/?utm_source=khan_rss&utm_medium=rss&utm_campaign=economy_news",
+      "date": "2026-11-24 16:50",
       "source": "경향신문 경제",
       "matched_keywords": [
-        "인공지능"
+        "하이닉스"
       ],
       "summary": [
-        "이형일 부총리 겸 재정경제부 장관은 최근 증시 변동성 확대와 관련해 정부의 시장 안정 의지를 밝혔다.",
-        "이 부총리는 시장 상황을 자세히 모니터링하며 이미 마련된 추가 대책을 적절한 시기에 시행하겠다고 전했다.",
+        "젠슨 황이 엔비디아 최고경영자(CEO)에 복귀하면서 국내 반도체 업계는 당장의 경영 불확실성이 해소됐다는 분위기입니다.",
+        "엔비디아의 AI 인프라 로드맵 추진에 맞춰 삼성전자와 SK하이닉스도 고대역폭메모리(HBM) 등 메모리 협력을 이어갈 것으로 전망됩니다.",
         "자세한 내용은 원문 확인 필요"
       ],
       "summary_by": "gemini"
