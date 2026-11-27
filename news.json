@@ -1,5 +1,5 @@
 {
-  "collected_at": "2026-11-26 13:56",
+  "collected_at": "2026-11-27 13:56",
   "keywords": [
     "드론",
     "하이닉스",
@@ -7,73 +7,75 @@
   ],
   "articles": [
     {
-      "title": "김해에 전국 1호 ‘햇빛소득마을’ 준공···연 2억원 매출 전망",
-      "link": "https://www.khan.co.kr/article/202611261254001/?utm_source=khan_rss&utm_medium=rss&utm_campaign=economy_news",
-      "date": "2026-11-26 12:54",
+      "title": "‘돈 내야 켜지는’ 자율주행, 유럽도 번졌다…‘구독 함정’ 유럽으로",
+      "link": "https://www.khan.co.kr/article/202611271340001/?utm_source=khan_rss&utm_medium=rss&utm_campaign=economy_news",
+      "date": "2026-11-27 13:40",
       "source": "경향신문 경제",
       "matched_keywords": [],
       "summary": [
-        "경남 김해 진례면 초전마을에 전국 1호 ‘햇빛소득마을’이 조성되어 태양광 발전시설의 준공식을 열었다.",
-        "초전마을의 태양광 발전시설은 이날부터 상업운전에 들어갔다.",
+        "이미 차에 달린 자율주행 및 보조주행 기능을 돈을 내야 켜는 유료 구독 방식이 유럽으로 확대되고 있습니다.",
+        "벤츠, 샤오펑, 기아 등 자동차 업체들이 유럽 시장에서 유료 기능 판매 및 구독을 진행하거나 논란이 발생하고 있습니다.",
         "자세한 내용은 원문 확인 필요"
       ],
       "summary_by": "gemini"
     },
     {
-      "title": "일일천하로 끝난 젠슨 황 효과···코스피 6% 급락, 4700선 무너져",
-      "link": "https://www.khan.co.kr/article/202611251650011/?utm_source=khan_rss&utm_medium=rss&utm_campaign=economy_news",
-      "date": "2026-11-25 16:50",
+      "title": "18년 만에 ‘증안펀드’ 가동하나···4700선 갇힌 코스피에 고민 깊어진 정부",
+      "link": "https://www.khan.co.kr/article/202611271248001/?utm_source=khan_rss&utm_medium=rss&utm_campaign=economy_news",
+      "date": "2026-11-27 12:48",
       "source": "경향신문 경제",
-      "matched_keywords": [
-        "인공지능"
-      ],
+      "matched_keywords": [],
       "summary": [
-        "젠슨 황 엔비디아 최고경영자(CEO)의 복귀로 급반등했던 국내 증시가 다시 주저앉았다.",
-        "미국 증시에서 인공지능 투자 지속성에 대한 의구심이 커지며 반도체주가 급락해 코스피가 전날 상승분을 모두 반납했다.",
-        "금리 인상 가능성도 커지면서 당분간 국내외 증시 변동성이 커질 것으로 보인다."
+        "코스피 지수가 지난 6월 고점 대비 절반 가까이 떨어진 4700선을 맴돌고 있습니다.",
+        "증권시장안정펀드로 증시를 떠받쳐야 한다는 요구가 크지만 정부의 고심이 깊어지고 있습니다.",
+        "자세한 내용은 원문 확인 필요"
       ],
       "summary_by": "gemini"
     },
     {
-      "title": "국내 500대 기업 이익잉여금 1862조원…삼전닉스 36.9%차지",
-      "link": "https://www.khan.co.kr/article/202611251516011/?utm_source=khan_rss&utm_medium=rss&utm_campaign=economy_news",
-      "date": "2026-11-25 15:16",
-      "source": "경향신문 경제",
-      "matched_keywords": [
-        "하이닉스"
-      ],
-      "summary": [
-        "2024년 3분기 대비 2026년 3분기 이익잉여금 증감액 상위 5개 기업. CEO스코어국내 500대 기업의 지난 3분기 말 기준 이익잉여금 총액이 1861조원을 넘은 것으로 나타났다.",
-        "삼성전자와 SK하이닉스의 이익잉여금이 전체의 3분의 1 이상을 차지했다."
-      ],
-      "summary_by": "rss"
-    },
-    {
-      "title": "인천시 ‘글로벌 AI 허브’ 유치 총력…다음달 산·학·연·관 협의체 출범",
-      "link": "https://www.khan.co.kr/article/202611251452001/?utm_source=khan_rss&utm_medium=rss&utm_campaign=economy_news",
-      "date": "2026-11-25 14:52",
+      "title": "권한 얼마나, 통제 어떻게…AI 에이전트에 ‘개인정보 안전핀’ 건다",
+      "link": "https://www.khan.co.kr/article/202611262045005/?utm_source=khan_rss&utm_medium=rss&utm_campaign=economy_news",
+      "date": "2026-11-26 20:45",
       "source": "경향신문 경제",
       "matched_keywords": [
         "인공지능"
       ],
       "summary": [
-        "인천시가 정부가 다음달 공모하는 ‘글로벌 인공지능(AI) 허브’ 유치에 본격적으로 나섰다.",
-        "인천시는 12월 16일 ‘인천 인공지능(AI)·인공지능 전환(AX) 기술혁신 협의체’를 출범시킬 예정이라고 25일 밝혔다."
+        "인공지능(AI) 에이전트의 확산으로 부작용 우려가 늘고 있지만 이를 규율할 법적 기준은 아직 공백 상태입니다.",
+        "다음달 '모두의 AI'를 비롯해 여러 AI 에이전트 서비스가 국내에 출시될 예정입니다.",
+        "정부는 연내 공개를 목표로 개인정보 보호와 안전 가이드라인을 마련하고 있습니다."
       ],
-      "summary_by": "rss"
+      "summary_by": "gemini"
     },
     {
-      "title": "인공지능 생성 얼굴을 가려내는 6가지 기준",
-      "link": "https://www.hani.co.kr/arti/science/science_general/1287655.html",
-      "date": null,
-      "source": "한겨레 미래&과학",
+      "title": "경매 오른 ‘AI와 사적 대화’…이용자 데이터 ‘거래 자산’ 됐다",
+      "link": "https://www.khan.co.kr/article/202611262044005/?utm_source=khan_rss&utm_medium=rss&utm_campaign=economy_news",
+      "date": "2026-11-26 20:44",
+      "source": "경향신문 경제",
       "matched_keywords": [
         "인공지능"
       ],
       "summary": [
-        "소개문이 없어 요약할 수 없어요. 원문을 확인해 주세요."
+        "파산 절차를 밟고 있는 미국 AI 챗봇 기업 ‘캐릭터AI’의 플랫폼과 이용자 대화 기록이 경매에 부쳐졌다.",
+        "주정부 법무장관들의 매각 저지 요청에 따라 법원이 적절성 사전 검증에 나섰다.",
+        "국내 주요 챗봇도 관련 규정이 없는 가운데 전문가들은 자동 삭제가 원칙이라고 지적했다."
       ],
-      "summary_by": "rss"
+      "summary_by": "gemini"
+    },
+    {
+      "title": "“머스크 ‘삼성전자 칩 장기구매’ 제안에···이재용 ‘뭐 더 해줄 건데’”",
+      "link": "https://www.khan.co.kr/article/202611262008001/?utm_source=khan_rss&utm_medium=rss&utm_campaign=economy_news",
+      "date": "2026-11-26 20:08",
+      "source": "경향신문 경제",
+      "matched_keywords": [
+        "인공지능"
+      ],
+      "summary": [
+        "인공지능 인프라 투자 열풍으로 메모리 반도체 품귀 현상이 지속되며 반도체를 구하려는 기업들이 한국에 모여들고 있다.",
+        "일론 머스크 테슬라 최고경영자가 이재용 삼성전자 회장에게 반도체 장기 구매계약을 제안했다.",
+        "자세한 내용은 원문 확인 필요"
+      ],
+      "summary_by": "gemini"
     }
   ],
   "failed_feeds": []
